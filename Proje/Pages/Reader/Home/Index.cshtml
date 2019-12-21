@@ -1,0 +1,35 @@
+﻿@page
+@model Proje.Pages.Reader.Home.IndexModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<!-- bir blog yazısı bas-->
+@foreach (var item in Model.icerik)
+{
+    <div class="blog-box row">
+        <div class="col-md-4">
+            <div class="post-media">
+                <a asp-page="./Details" asp-route-id="@item.ID" title="">
+                    <img width="800" height="800" src="@item.ContentImg" alt="@item.ContentName" class="img-fluid">
+                    <div class="hovereffect"></div>
+                </a>
+            </div><!-- end media -->
+        </div><!-- end col -->
+
+        <div class="blog-meta big-meta col-md-8">
+            <span class="bg-aqua"><a href="#" title="">@item.Category.CategoryName</a></span>
+            <h4><a asp-page="./Details" asp-route-id="@item.ID" title="">@item.ContentName</a></h4>
+            <p>@item.ContentDetail</p>
+            <small><a href="#" title=""><i class="fa fa-eye"></i> @item.ContentHit</a></small>
+            <small><a asp-page="./Details" asp-route-id="@item.ID" title="">@item.ContentTime</a></small>
+            <small><a href="#" title="">by Admin</a></small>
+        </div><!-- end meta -->
+    </div><!-- end blog-box -->
+    <!-- bir blog yazısı bitis-->
+    <hr class="invis">
+}
+
+
+

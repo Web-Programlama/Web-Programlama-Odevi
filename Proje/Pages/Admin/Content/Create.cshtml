@@ -1,0 +1,69 @@
+﻿@page
+@model Proje.Pages.Admin.Content.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Content</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4" >
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Content.CategoryID" class="control-label"></label>
+                <select asp-for="Content.CategoryID" class="form-control" asp-items="ViewBag.CategoryID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentTime" class="control-label"></label>
+                <input asp-for="Content.ContentTime" class="form-control" />
+                <span asp-validation-for="Content.ContentTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentImg" class="control-label"></label>
+                <input type="file" class="form-control" name="files" />
+                <span asp-validation-for="Content.ContentImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentName" class="control-label"></label>
+                <input asp-for="Content.ContentName" class="form-control" />
+                <span asp-validation-for="Content.ContentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentDetail" class="control-label"></label>
+                <input asp-for="Content.ContentDetail" class="form-control" />
+                <span asp-validation-for="Content.ContentDetail" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Content.ContentState" /> @Html.DisplayNameFor(model => model.Content.ContentState)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentKeywords" class="control-label"></label>
+                <input asp-for="Content.ContentKeywords" class="form-control" />
+                <span asp-validation-for="Content.ContentKeywords" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content.ContentHit" class="control-label"></label>
+                <input asp-for="Content.ContentHit" class="form-control" />
+                <span asp-validation-for="Content.ContentHit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
