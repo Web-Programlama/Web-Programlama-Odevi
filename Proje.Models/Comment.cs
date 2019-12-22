@@ -19,5 +19,10 @@ namespace Proje.Models
         public DateTime CommentTime { get; set; }
 
         public double CommentRating { get; set; }
+
+        public string ReaderID { get; set; }
+
+        [ForeignKey("ReaderID")]
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

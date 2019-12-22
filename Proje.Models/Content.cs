@@ -16,7 +16,6 @@ namespace Proje.Models
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
         public DateTime ContentTime { get; set; }
-        public string ContentImgPath { get; set; }
         public string ContentName { get; set; }
         public string ContentDetail { get; set; }
         public bool ContentState { get; set; }
