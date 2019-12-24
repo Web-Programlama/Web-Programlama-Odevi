@@ -44,6 +44,7 @@ namespace Proje.Pages.Admin.Content
                 return Page();
             }
             Content.ContentTime = DateTime.Now;
+            Content.ContentHit = 0;
             string fileName = Guid.NewGuid().ToString();
             var uploads = Path.Combine(webRootPath, @"images\content");
             var extension = Path.GetExtension(files[0].FileName);
