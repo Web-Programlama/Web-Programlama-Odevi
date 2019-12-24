@@ -49,7 +49,6 @@ namespace Proje.Pages.Admin.Content
             {
                 return Page();
             }
-
             _context.Attach(Content).State = EntityState.Modified;
 
             try

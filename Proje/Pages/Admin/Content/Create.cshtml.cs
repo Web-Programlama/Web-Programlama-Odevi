@@ -43,6 +43,7 @@ namespace Proje.Pages.Admin.Content
             {
                 return Page();
             }
+            Content.ContentTime = DateTime.Now;
             string fileName = Guid.NewGuid().ToString();
             var uploads = Path.Combine(webRootPath, @"images\content");
             var extension = Path.GetExtension(files[0].FileName);
@@ -52,7 +53,6 @@ namespace Proje.Pages.Admin.Content
                 files[0].CopyTo(fileStream);
             }
             Content.ContentImg = @"\images\content\" + fileName + extension;
-
             _context.Content.Add(Content);
             await _context.SaveChangesAsync();
 

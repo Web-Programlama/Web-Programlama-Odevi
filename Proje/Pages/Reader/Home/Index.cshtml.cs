@@ -23,12 +23,12 @@ namespace Proje.Pages.Reader.Home
         public List<Proje.Models.Comment> yorum { get; set; }
         public IList<Proje.Models.Content> Content { get; set; }
 
-       
-        
+
+
 
         public async Task OnGetAsync()
         {
-            icerik = _db.Content.ToList();
+            icerik = _db.Content.OrderByDescending(x => x.ContentTime).ToList();
             Content = await _db.Content
                 .Include(c => c.Category).ToListAsync();
         }

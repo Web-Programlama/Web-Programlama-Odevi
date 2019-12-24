@@ -857,26 +857,6 @@ div.tab button:hover {
     margin: 1rem 0 0;
 }
 
-.gp-button.btn-primary:hover,
-.gp-button.btn-primary:focus,
-.gp-button.btn-primary {
-    border-color: #DA5333 !important;
-    background-color: #DA5333 !important;
-}
-
-.fb-button.btn-primary:focus,
-.fb-button.btn-primary:hover,
-.fb-button.btn-primary {
-    background-color: #3B5998 !important;
-    border-color: #3B5998 !important;
-}
-
-.tw-button.btn-primary:hover,
-.tw-button.btn-primary:focus,
-.tw-button.btn-primary {
-    background-color: #00B6F1 !important;
-    border-color: #00B6F1 !important;
-}
 
 .tw-button i,
 .fb-button i {
@@ -1608,16 +1588,6 @@ hr.invis3 {
 
 .newsletter-widget .btn i {
     padding-left: 0.5rem
-}
-
-.btn {
-    background-color: #111111;
-    border: 0 none;
-    border-radius: 0;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 0.8rem 2rem;
-    text-transform: none;
 }
 
 .link-widget li {
