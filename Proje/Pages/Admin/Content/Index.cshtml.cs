@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Proje.Data;
 using Proje.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Proje.Pages.Admin.Content
 {
+    [Authorize(Roles = "Admin")]
     public class IndexModel : PageModel
     {
         private readonly Proje.Data.ApplicationDbContext _context;

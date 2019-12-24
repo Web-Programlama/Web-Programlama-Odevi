@@ -24,11 +24,11 @@
                 <input asp-for="Content.ContentTime" class="form-control" />
                 <span asp-validation-for="Content.ContentTime" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Content.ContentImg" class="control-label"></label>
-                <input type="file" class="form-control" name="files" />
+                <input type="file" class="form-control" name="files" value="@Html.DisplayFor(model => model.Content.ContentImg)"/>
                 <span asp-validation-for="Content.ContentImg" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Content.ContentName" class="control-label"></label>
                 <input asp-for="Content.ContentName" class="form-control" />
